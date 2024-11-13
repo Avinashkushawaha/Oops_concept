@@ -1,0 +1,22 @@
+# import time
+# time.sleep(2)
+
+import math
+result = math.sqrt(16)  
+print(result)
+sine_value = math.sin(math.pi / 2)
+print(sine_value)
+cosine_value = math.cos(0)
+print(cosine_value)
+tangent_value = math.tan(math.pi / 4)
+print(tangent_value)
+print(math.pi)
+print(math.e)
+ceil_value = math.ceil(3.14)
+print(ceil_value)
+floor_value = math.floor(3.14)
+print(floor_value)
+fact_value = math.factorial(5) 
+print(fact_value)
+print(math.sin(0))
+print(math.cos(0))
