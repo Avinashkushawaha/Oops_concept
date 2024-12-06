@@ -12,6 +12,12 @@ class Person:
     def Name(self, value):
         self.__name = value
 
+    @staticmethod
+    def mymethod():
+        print("Hello World")    
+
+Person.mymethod()
+
 p1 = Person("Mike", 20, 'm')
 print(p1.Name)       
 
