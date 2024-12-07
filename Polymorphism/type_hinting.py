@@ -7,3 +7,7 @@ def otherfunction(otherparameter: str):
 otherfunction(myfunction(20))
 
 def dosth(param: list[int]):
+    for num in param:
+        print(num)
+
+dosth([1, 2, 3, 4])        
