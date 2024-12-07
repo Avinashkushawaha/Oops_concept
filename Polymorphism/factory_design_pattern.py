@@ -1,8 +1,8 @@
-from abc import ABCMeta, abstractstaticmethod
+from abc import ABCMeta, abstractmethod
 
 class IPerson(metaclass=ABCMeta):
 
-    @abstractstaticmethod
+    @abstractmethod
     def person_method():
         """ Interface Method """
 
@@ -10,7 +10,7 @@ class Student(IPerson):
     def __init__(self):
         self.name = "Basic Student Name"
 
-    def person_mehtod(self):
+    def person_method(self):
         print("I am a student")
 
 class Teacher(IPerson):
@@ -29,9 +29,13 @@ class PersonFactory:
         if person_type == "Teacher":
             return Teacher()
         print("Invalid Type")
-        return -1
+        return None
     
 if __name__ == "__main__":
-    choice = input("What type of perosn do you want to create?\n")
-    perosn = PersonFactory.build_person(choice)
-    person.person_method()    
+    choice = input("What type of perosn do you want to create?(Student/Teacher)\n")
+    person = PersonFactory.build_person(choice)
+
+    if person:  
+        person.person_method()    
+    else:
+        print("could not create person")    
