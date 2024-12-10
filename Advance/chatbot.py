@@ -84,4 +84,8 @@ def main():
     while funding not in funding_options:
         funding = input(f"Invalid input. Please choose from {funding_options}: ")
 
-    
+    print("\nTHANK YOU FOR SUBMITTING YOUR DETAILS!")
+    print("Our team will connect with you soon for further communication/discussion.")
+
+if __name__ == "__main__":
+    main()
