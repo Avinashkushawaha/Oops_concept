@@ -5,3 +5,10 @@ def requires_auth(func):
             return
         return func(user)
     return wrapper
+
+@requires_auth
+def welcome(user):
+    print(f"Welcome {user['name']}!")
+
+user = {"name": "John", "authenticated": False}
+welcome(user)
