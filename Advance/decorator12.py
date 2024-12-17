@@ -19,14 +19,14 @@ def class_deco(cls_name):
         return wrapper
     
     for attr in dir(cls_name):
-        if callable(getattr(cls_name, attr)) and not attr.swithswith("__"):
+        if callable(getattr(cls_name, attr)) and not attr.startswith("__"):
             method = getattr(cls_name, attr)
             decorated_method = method_decoration(method)
             setattr(cls_name, attr, decorated_method)
     return cls_name
 
 @class_deco
-class Mtah:
+class Math:
     def __init__(self, n1, n2):
         self.n1 = n1
         self.n2 = n2
@@ -40,7 +40,7 @@ class Mtah:
         else:
             return "Division by zero is not allowed."
         
-        def multiply(self):
+    def multiply(self):
             return self.n1 * self.n2
         
         
